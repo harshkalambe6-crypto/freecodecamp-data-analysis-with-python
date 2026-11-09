@@ -1,9 +1,11 @@
+from pathlib import Path
+
 import pandas as pd
 
 
 def calculate_demographic_data(print_data=True):
     # Read data from file
-    df = pd.read_csv('adult.data.csv')
+    df = pd.read_csv(Path(__file__).resolve().parent / 'adult.data.csv')
 
     # How many of each race are represented in this dataset?
     race_count = df['race'].value_counts()
@@ -74,3 +76,7 @@ def calculate_demographic_data(print_data=True):
         'highest_earning_country_percentage': highest_earning_country_percentage,
         'top_IN_occupation': top_IN_occupation
     }
+
+
+if __name__ == "__main__":
+    calculate_demographic_data()

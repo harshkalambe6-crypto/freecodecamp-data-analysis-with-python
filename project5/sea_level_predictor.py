@@ -2,12 +2,15 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import pandas as pd
+from pathlib import Path
 from scipy.stats import linregress
+
+_BASE_DIR = Path(__file__).resolve().parent
 
 
 def draw_plot():
     # Read data from file
-    df = pd.read_csv('epa-sea-level.csv')
+    df = pd.read_csv(_BASE_DIR / 'epa-sea-level.csv')
 
     # Create scatter plot using the Year column as the x-axis and the
     # CSIRO Adjusted Sea Level column as the y-axis.
@@ -37,5 +40,5 @@ def draw_plot():
     plt.title('Rise in Sea Level')
 
     # Save plot and return data for testing (DO NOT MODIFY)
-    plt.savefig('sea_level_plot.png')
+    plt.savefig(_BASE_DIR / 'sea_level_plot.png')
     return plt.gca()

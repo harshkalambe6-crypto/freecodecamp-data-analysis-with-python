@@ -3,11 +3,14 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+from pathlib import Path
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 
+_BASE_DIR = Path(__file__).resolve().parent
+
 # Import data (Make sure to parse dates. Consider setting index column to 'date'.)
-df = pd.read_csv('fcc-forum-pageviews.csv', parse_dates=['date'], index_col='date')
+df = pd.read_csv(_BASE_DIR / 'fcc-forum-pageviews.csv', parse_dates=['date'], index_col='date')
 
 # Clean data: drop days in the top 2.5% and bottom 2.5% of page views.
 lower = df['value'].quantile(0.025)
@@ -21,7 +24,7 @@ def draw_line_plot():
     ax.set_title('Daily freeCodeCamp Forum Page Views 5/2016-12/2019')
     ax.set_xlabel('Date')
     ax.set_ylabel('Page Views')
-    fig.savefig('line_plot.png')
+    fig.savefig(_BASE_DIR / 'line_plot.png')
     return fig
 
 
@@ -39,7 +42,7 @@ def draw_bar_plot():
     months = ['January', 'February', 'March', 'April', 'May', 'June',
               'July', 'August', 'September', 'October', 'November', 'December']
     ax.legend(months, title='Months')
-    fig.savefig('bar_plot.png')
+    fig.savefig(_BASE_DIR / 'bar_plot.png')
     return fig
 
 
@@ -66,5 +69,5 @@ def draw_box_plot():
     axes[1].set_xlabel('Month')
     axes[1].set_ylabel('Page Views')
 
-    fig.savefig('box_plot.png')
+    fig.savefig(_BASE_DIR / 'box_plot.png')
     return fig

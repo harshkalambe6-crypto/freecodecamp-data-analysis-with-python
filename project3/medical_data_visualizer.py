@@ -4,9 +4,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from pathlib import Path
+
+_BASE_DIR = Path(__file__).resolve().parent
 
 # Import data
-df = pd.read_csv('medical_examination.csv')
+df = pd.read_csv(_BASE_DIR / 'medical_examination.csv')
 
 # Add 'overweight' column: BMI = weight (kg) / height (m)^2;
 # overweight is 1 when BMI > 25, otherwise 0.
@@ -46,7 +49,7 @@ def draw_cat_plot():
     )
 
     # Do not modify the next two lines
-    fig.savefig('catplot.png')
+    fig.savefig(_BASE_DIR / 'catplot.png')
     return fig.fig
 
 
@@ -77,5 +80,5 @@ def draw_heat_map():
     )
 
     # Do not modify the next two lines
-    fig.savefig('heatmap.png')
+    fig.savefig(_BASE_DIR / 'heatmap.png')
     return fig
