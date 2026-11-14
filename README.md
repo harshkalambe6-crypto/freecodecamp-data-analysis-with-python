@@ -2,7 +2,7 @@
 
 Practice projects for the freeCodeCamp Data Analysis with Python certification, by Harsh Ganesh Kalambe, a second-year B.Sc. Data Science student at KES Shroff College, Kandivali, Mumbai.
 
-**Status: in progress — certificate not earned yet.** All five projects in this repository are practice builds, tested locally with freeCodeCamp's own test files. None of them has been submitted on freeCodeCamp yet, so none is marked Passed there, and nothing here claims a completed certificate.
+**Status: in progress — certificate not earned yet.** All five projects in this repository were submitted on freeCodeCamp on 9 November 2026 and are marked Passed there. The certificate itself is not earned yet — the 28 lesson challenges still need to be completed — and nothing here claims a completed certificate.
 
 ## About this repository
 
@@ -98,7 +98,7 @@ See `requirements.txt` for the pinned versions used when testing locally.
 
 ![Scatter plot of sea level against year, with two lines of best fit extended to 2050](project5/sea_level_plot.png)
 
-- **Tests:** freeCodeCamp's official `test_module.py`, 4 tests, all passing locally. The authoritative check is still freeCodeCamp's own test runner when the project is submitted there.
+- **Tests:** freeCodeCamp's official `test_module.py`, 4 tests, all passing locally. The project was submitted on freeCodeCamp on 9 November 2026 and is marked Passed there.
 
 ## Repository structure
 
@@ -170,7 +170,7 @@ cd project4 && python3 -m unittest test_module -v
 cd project5 && python3 -m unittest test_module -v
 ```
 
-Test results, run locally: Project 1 — 3/3 pass; Project 2 — 10/10 pass; Project 3 — 4/4 pass; Project 4 — 11/11 pass; Project 5 — 4/4 pass. These are local test runs only. The projects have not been submitted on freeCodeCamp, so they are not marked Passed there.
+Test results, run locally: Project 1 — 3/3 pass; Project 2 — 10/10 pass; Project 3 — 4/4 pass; Project 4 — 11/11 pass; Project 5 — 4/4 pass. All five projects were also submitted on freeCodeCamp on 9 November 2026 and are marked Passed there.
 
 ## Learning outcomes
 
